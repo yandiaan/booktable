@@ -1,18 +1,17 @@
-import React from 'react';
-import Header from './components/Header/header';
-import Navbar from './components/Navbar/navbar';
-import Hero from './components/Hero';
-import Variant from './components/Variant';
-import Menu from './components/Menu';
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/navbar";
+import BookTable from "./pages/BookTable";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <Variant />
-      <Menu />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="book-table" element={<BookTable />} />
+      </Routes>
       {/* <Header /> */}
     </div>
   );
